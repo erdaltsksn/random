@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	random "github.com/erdaltsksn/random/v1"
 	"github.com/gookit/color"
 	"github.com/spf13/cobra"
+
+	random "github.com/erdaltsksn/random/v1"
 )
 
 var (
