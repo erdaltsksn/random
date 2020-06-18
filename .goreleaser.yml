@@ -20,4 +20,4 @@ brews:
       name: homebrew-tap
     folder: Formula
     homepage: https://github.com/erdaltsksn/random
-    description: Generate random data AKA faker
+    description: Random data generator AKA faker
