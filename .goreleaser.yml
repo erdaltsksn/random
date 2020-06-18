@@ -1,0 +1,23 @@
+before:
+  hooks:
+    # You may remove this if you don't use go modules.
+    - go mod download
+builds:
+- main:
+  env:
+  - CGO_ENABLED=0
+    # GOOS list to build for.
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    # Defaults are darwin and linux.
+  goos:
+  - darwin
+  - linux
+  - windows
+
+brews:
+  - github:
+      owner: erdaltsksn
+      name: homebrew-tap
+    folder: Formula
+    homepage: https://github.com/erdaltsksn/random
+    description: Generate random data AKA faker
