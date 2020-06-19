@@ -10,6 +10,7 @@ Faker.
 ## Features
 
 - Cross-Platform
+- Automatically copied into system clipboard
 
 ## Getting Started
 

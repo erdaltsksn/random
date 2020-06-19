@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/gookit/color"
@@ -27,7 +26,7 @@ var letterCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		fmt.Println(random.Letter(lower, upper))
+		Output(random.Letter(lower, upper))
 	},
 }
 

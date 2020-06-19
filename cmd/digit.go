@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 
 	random "github.com/erdaltsksn/random/v1"
@@ -15,7 +13,7 @@ var digitCmd = &cobra.Command{
 	Long: `Generates a random digits (as one-digit-numerals). A digit is a
 number from 0 to 9.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(random.Digit())
+		Output(random.Digit())
 	},
 }
 
