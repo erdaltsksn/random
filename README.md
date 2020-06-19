@@ -39,7 +39,7 @@ go get github.com/erdaltsksn/random
 ### Using Homebrew
 
 ```sh
-brew install erdaltsksn/tap/random
+brew upgrade erdaltsksn/tap/random
 ```
 
 ### Using Go Modules
