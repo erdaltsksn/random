@@ -13,7 +13,7 @@ var digitCmd = &cobra.Command{
 	Long: `Generates a random digits (as one-digit-numerals). A digit is a
 number from 0 to 9.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Output(random.Digit())
+		printOutput(random.Digit())
 	},
 }
 

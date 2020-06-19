@@ -12,7 +12,7 @@ var upperCmd = &cobra.Command{
 	Short: "Generates a random uppercase letter",
 	Long:  `Generates a random uppercase latin letter in the range of A-Z.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Output(random.LetterUpperCase())
+		printOutput(random.LetterUpperCase())
 	},
 }
 

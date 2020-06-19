@@ -12,7 +12,7 @@ var lowerCmd = &cobra.Command{
 	Short: "Generates a random lowercase letter",
 	Long:  `Generates a random lowercase latin letter in the range of a-z.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Output(random.LetterLowerCase())
+		printOutput(random.LetterLowerCase())
 	},
 }
 

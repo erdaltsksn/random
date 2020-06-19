@@ -9,8 +9,8 @@ import (
 	"github.com/gookit/color"
 )
 
-// Output is used to print the result and copy it into system clipboard
-func Output(o interface{}) {
+// printOutput is used to print the result and copy it into system clipboard
+func printOutput(o interface{}) {
 	output := fmt.Sprint(o)
 	fmt.Println(output)
 

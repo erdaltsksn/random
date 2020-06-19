@@ -12,7 +12,7 @@ var letterCmd = &cobra.Command{
 	Short: "Generates a random letter",
 	Long:  `Generates a random latin letter in the range of a-Z and A-Z.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		Output(random.Letter())
+		printOutput(random.Letter())
 	},
 }
 
