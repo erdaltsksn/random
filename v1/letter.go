@@ -5,20 +5,25 @@ import (
 	"time"
 )
 
-// Letter generate a random letter
-func Letter(lower bool, upper bool) string {
-	rand.Seed(time.Now().UnixNano())
-
-	if lower {
-		return string('a' + rand.Intn(26))
-	}
-
-	if upper {
-		return string('A' + rand.Intn(26))
-	}
-
-	c := []int{'a', 'A'}
+// Letter generate a random lowercase or uppercase letter
+func Letter() string {
+	letterCase := []int{'a', 'A'}
 	rand.Seed(time.Now().UnixNano())
 	r := rand.Intn(2)
-	return string(c[r] + rand.Intn(26))
+
+	return string(letterCase[r] + rand.Intn(26))
+}
+
+// LetterLowerCase generate a random lowercase letter
+func LetterLowerCase() string {
+	rand.Seed(time.Now().UnixNano())
+
+	return string('a' + rand.Intn(26))
+}
+
+// LetterUpperCase generate a random uppercase letter
+func LetterUpperCase() string {
+	rand.Seed(time.Now().UnixNano())
+
+	return string('A' + rand.Intn(26))
 }

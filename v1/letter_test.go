@@ -6,54 +6,86 @@ import (
 	random "github.com/erdaltsksn/random/v1"
 )
 
-var allLetters = []string{
-	"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-	"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-	"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-	"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
-}
-
-var lowercaseLettters = []string{
-	"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-	"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-}
-
-var uppercaseLetters = []string{
-	"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-	"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
-}
-
 func TestLetter(t *testing.T) {
-	type args struct {
-		lower bool
-		upper bool
+	var allLetters = []string{
+		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+		"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
 	}
+
 	tests := []struct {
-		name   string
-		args   args
-		output []string
+		name string
 	}{
-		{"Letter", args{}, allLetters},
-		{"Lowercase", args{lower: true, upper: false}, lowercaseLettters},
-		{"Only Lowercase", args{lower: true}, lowercaseLettters},
-		{"Uppercase", args{lower: false, upper: true}, uppercaseLetters},
-		{"Only Uppercase", args{upper: true}, uppercaseLetters},
+		{"All Letters"},
 	}
 	for _, tt := range tests {
-		for i := 0; i < 1000; i++ {
-			got := random.Letter(tt.args.lower, tt.args.upper)
-			t.Run(tt.name, func(t *testing.T) {
-				if !inLetters(got, tt.output) {
-					t.Error("Got:", got, ",", tt.output)
-				}
-			})
-		}
+		t.Run(tt.name, func(t *testing.T) {
+			for i := 0; i < 1000; i++ {
+				got := random.Letter()
+				t.Run(tt.name, func(t *testing.T) {
+					if !inLetters(got, allLetters) {
+						t.Error("Got:", got, "Want", allLetters)
+					}
+				})
+			}
+		})
 	}
 }
 
-func inLetters(d string, letters []string) bool {
+func TestLetterLowerCase(t *testing.T) {
+	var lowercaseLetters = []string{
+		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+		"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+	}
+
+	tests := []struct {
+		name string
+	}{
+		{"Lowercase Letters"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			for i := 0; i < 1000; i++ {
+				got := random.LetterLowerCase()
+				t.Run(tt.name, func(t *testing.T) {
+					if !inLetters(got, lowercaseLetters) {
+						t.Error("Got:", got, "Want:", lowercaseLetters)
+					}
+				})
+			}
+		})
+	}
+}
+
+func TestLetterUpperCase(t *testing.T) {
+	var uppercaseLetters = []string{
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+	}
+
+	tests := []struct {
+		name string
+	}{
+		{"Uppercase Letters"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			for i := 0; i < 1000; i++ {
+				got := random.LetterUpperCase()
+				t.Run(tt.name, func(t *testing.T) {
+					if !inLetters(got, uppercaseLetters) {
+						t.Error("Got:", got, "Want:", uppercaseLetters)
+					}
+				})
+			}
+		})
+	}
+}
+
+func inLetters(l string, letters []string) bool {
 	for _, v := range letters {
-		if v == d {
+		if v == l {
 			return true
 		}
 	}
