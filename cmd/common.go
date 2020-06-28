@@ -2,11 +2,10 @@ package cmd
 
 import (
 	"fmt"
-	"os"
 	"os/exec"
 	"runtime"
 
-	"github.com/gookit/color"
+	"github.com/erdaltsksn/cui"
 )
 
 // printOutput is used to print the result and copy it into system clipboard
@@ -14,13 +13,11 @@ func printOutput(o interface{}) {
 	output := fmt.Sprint(o)
 	fmt.Println(output)
 
-	if err := toClipboard(fmt.Sprint(output)); err != nil {
-		color.Danger.Println("Error while copying value to system clipboard")
-		color.Warn.Prompt(err.Error())
-		os.Exit(1)
+	if err := toClipboard(output); err != nil {
+		cui.Error("Error while copying value to system clipboard", err)
 	}
 
-	color.Info.Println("√ Copied")
+	cui.Success("Copied")
 }
 
 func toClipboard(output string) error {

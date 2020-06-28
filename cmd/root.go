@@ -1,9 +1,7 @@
 package cmd
 
 import (
-	"os"
-
-	"github.com/gookit/color"
+	"github.com/erdaltsksn/cui"
 	"github.com/spf13/cobra"
 )
 
@@ -22,8 +20,7 @@ address, hex color etc.`,
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		color.Danger.Prompt(err.Error())
-		os.Exit(1)
+		cui.Error("Something went wrong", err)
 	}
 }
 
