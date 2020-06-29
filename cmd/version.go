@@ -5,12 +5,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var version string
-
-// SetVersion set the application version for consumption in the output of the command.
-func SetVersion(v string) {
-	version = v
-}
+var version = "unknown"
 
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{

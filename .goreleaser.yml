@@ -13,12 +13,12 @@ builds:
   - darwin
   - linux
   - windows
-  ldflags: -s -w -X main.version=v{{.Version}}
+  ldflags: -s -w -X {{ replace .GitURL "https://" ""}}/cmd.version={{.Tag}}
 
 brews:
   - github:
       owner: erdaltsksn
       name: homebrew-tap
     folder: Formula
-    homepage: https://github.com/erdaltsksn/random
+    homepage: "{{ .GitURL }}"
     description: Random data generator AKA faker
