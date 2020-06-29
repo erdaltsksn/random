@@ -13,6 +13,7 @@ builds:
   - darwin
   - linux
   - windows
+  ldflags: -s -w -X main.version={{.Version}}
 
 brews:
   - github:
