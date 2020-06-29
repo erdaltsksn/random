@@ -17,7 +17,7 @@ var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "Prints the app's version",
 	Long: `Prints the app's version. This app uses semver and the version value
-automatically generated while building.`,
+is automatically generated while building.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		cui.Info(version)
 	},
