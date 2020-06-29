@@ -13,7 +13,7 @@ builds:
   - darwin
   - linux
   - windows
-  ldflags: -s -w -X {{ replace .GitURL "https://" ""}}/cmd.version={{.Tag}}
+  ldflags: -s -w -X github.com/erdaltsksn/cui.appVersion={{.Tag}}
 
 brews:
   - github:

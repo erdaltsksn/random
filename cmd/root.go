@@ -28,3 +28,7 @@ func Execute() {
 func GetRootCmd() *cobra.Command {
 	return rootCmd
 }
+
+func init() {
+	rootCmd.AddCommand(cui.VersionCmd)
+}
