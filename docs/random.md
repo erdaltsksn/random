@@ -15,6 +15,7 @@ address, hex color etc.
 
 ### SEE ALSO
 
+* [random card](random_card.md)	 - Generate a random card number
 * [random digit](random_digit.md)	 - Generates a random digit
 * [random letter](random_letter.md)	 - Generates a random letter
 * [random lorem](random_lorem.md)	 - Generate a dummy text
