@@ -65,10 +65,9 @@ The following is the list of supported scopes:
 - **(readme)** e.g. readme, changelog, code of conduct, license and etc.
 - **(cmd)** Root command and shared functions.
 - **(pkg)** Anything related to the library.
-- **(card)**
-- **(digit)**
-- **(letter)**
-- **(lorem)**
+
+**NOTE:** Every generator (letter,lorem,country and etc.) can be used as scope
+as well.
 
 ### Revert and Merge
 
