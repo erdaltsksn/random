@@ -9,8 +9,8 @@ import (
 
 func TestLorem(t *testing.T) {
 	tests := []struct {
-		name   string
-		output string
+		name string
+		want string
 	}{
 		{"Whole", fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
 Tristique sollicitudin nibh sit amet commodo. Pharetra magna ac placerat vestibulum. Felis donec et odio pellentesque diam volutpat commodo. Feugiat nibh sed pulvinar proin gravida hendrerit. Risus nullam eget felis eget nunc. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Nibh praesent tristique magna sit. Morbi tincidunt ornare massa eget egestas. Sollicitudin nibh sit amet commodo nulla. Nunc sed velit dignissim sodales ut eu sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Tempus imperdiet nulla malesuada pellentesque elit eget. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Magna fringilla urna porttitor rhoncus dolor purus non enim. At risus viverra adipiscing at in tellus integer feugiat. A cras semper auctor neque. Consectetur libero id faucibus nisl tincidunt eget nullam non. Eu mi bibendum neque egestas congue quisque egestas diam in.
@@ -27,8 +27,8 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 		t.Run(tt.name, func(t *testing.T) {
 			got := random.Lorem()
 			t.Run(tt.name, func(t *testing.T) {
-				if got != tt.output {
-					t.Error("Got:", got, "Want", tt.output)
+				if got != tt.want {
+					t.Error("Got:", got, "Want", tt.want)
 				}
 			})
 		})
@@ -36,17 +36,19 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 }
 
 func TestLoremParagraph(t *testing.T) {
+	type args struct {
+		count int
+	}
 	tests := []struct {
-		name   string
-		count  int
-		output string
+		name string
+		args args
+		want string
 	}{
-
-		{"Zero", 0, ""},
-		{"One Paragraph", 1, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.`)},
-		{"Two Paragraph", 2, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
+		{"Zero", args{count: 0}, ""},
+		{"One Paragraph", args{count: 1}, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.`)},
+		{"Two Paragraph", args{count: 2}, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
 Tristique sollicitudin nibh sit amet commodo. Pharetra magna ac placerat vestibulum. Felis donec et odio pellentesque diam volutpat commodo. Feugiat nibh sed pulvinar proin gravida hendrerit. Risus nullam eget felis eget nunc. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Nibh praesent tristique magna sit. Morbi tincidunt ornare massa eget egestas. Sollicitudin nibh sit amet commodo nulla. Nunc sed velit dignissim sodales ut eu sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Tempus imperdiet nulla malesuada pellentesque elit eget. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Magna fringilla urna porttitor rhoncus dolor purus non enim. At risus viverra adipiscing at in tellus integer feugiat. A cras semper auctor neque. Consectetur libero id faucibus nisl tincidunt eget nullam non. Eu mi bibendum neque egestas congue quisque egestas diam in.`)},
-		{"10< Paragraph", 13, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
+		{"10< Paragraph", args{count: 13}, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
 Tristique sollicitudin nibh sit amet commodo. Pharetra magna ac placerat vestibulum. Felis donec et odio pellentesque diam volutpat commodo. Feugiat nibh sed pulvinar proin gravida hendrerit. Risus nullam eget felis eget nunc. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Nibh praesent tristique magna sit. Morbi tincidunt ornare massa eget egestas. Sollicitudin nibh sit amet commodo nulla. Nunc sed velit dignissim sodales ut eu sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Tempus imperdiet nulla malesuada pellentesque elit eget. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Magna fringilla urna porttitor rhoncus dolor purus non enim. At risus viverra adipiscing at in tellus integer feugiat. A cras semper auctor neque. Consectetur libero id faucibus nisl tincidunt eget nullam non. Eu mi bibendum neque egestas congue quisque egestas diam in.
 Nunc faucibus a pellentesque sit amet. Luctus venenatis lectus magna fringilla. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Amet est placerat in egestas erat. Erat imperdiet sed euismod nisi. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Eu nisl nunc mi ipsum. Tortor at risus viverra adipiscing at in tellus integer feugiat. Metus vulputate eu scelerisque felis imperdiet proin. Feugiat pretium nibh ipsum consequat nisl vel. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. A condimentum vitae sapien pellentesque. Amet commodo nulla facilisi nullam vehicula ipsum a. Mauris ultrices eros in cursus turpis massa. Tristique senectus et netus et. Leo integer malesuada nunc vel risus commodo viverra. Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
 Ut ornare lectus sit amet est. Cras pulvinar mattis nunc sed blandit. Quam elementum pulvinar etiam non quam. Proin fermentum leo vel orci porta non. Diam quis enim lobortis scelerisque fermentum dui faucibus. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Elementum facilisis leo vel fringilla. Malesuada bibendum arcu vitae elementum. Pharetra convallis posuere morbi leo urna molestie at elementum. Ultricies leo integer malesuada nunc. Maecenas sed enim ut sem viverra aliquet eget sit amet. Elementum nibh tellus molestie nunc non blandit massa enim nec. Eu non diam phasellus vestibulum lorem sed risus. Vel turpis nunc eget lorem dolor sed viverra ipsum nunc. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Nullam non nisi est sit amet facilisis. Ornare arcu dui vivamus arcu felis bibendum ut tristique.
@@ -59,10 +61,10 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := random.LoremParagraph(tt.count)
+			got := random.LoremParagraph(tt.args.count)
 			t.Run(tt.name, func(t *testing.T) {
-				if got != tt.output {
-					t.Error("Got:", got, "Want", tt.output)
+				if got != tt.want {
+					t.Error("Got:", got, "Want", tt.want)
 				}
 			})
 		})
@@ -70,16 +72,18 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 }
 
 func TestLoremSentence(t *testing.T) {
+	type args struct {
+		count int
+	}
 	tests := []struct {
-		name   string
-		count  int
-		output string
+		name string
+		args args
+		want string
 	}{
-
-		{"Zero", 0, ""},
-		{"One Sentence", 1, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-		{"Two Sentences", 2, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo."},
-		{"154< Sentences", 155, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
+		{"Zero", args{count: 0}, ""},
+		{"One Sentence", args{count: 1}, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+		{"Two Sentences", args{count: 2}, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo."},
+		{"154< Sentences", args{count: 155}, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
 Tristique sollicitudin nibh sit amet commodo. Pharetra magna ac placerat vestibulum. Felis donec et odio pellentesque diam volutpat commodo. Feugiat nibh sed pulvinar proin gravida hendrerit. Risus nullam eget felis eget nunc. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Nibh praesent tristique magna sit. Morbi tincidunt ornare massa eget egestas. Sollicitudin nibh sit amet commodo nulla. Nunc sed velit dignissim sodales ut eu sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Tempus imperdiet nulla malesuada pellentesque elit eget. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Magna fringilla urna porttitor rhoncus dolor purus non enim. At risus viverra adipiscing at in tellus integer feugiat. A cras semper auctor neque. Consectetur libero id faucibus nisl tincidunt eget nullam non. Eu mi bibendum neque egestas congue quisque egestas diam in.
 Nunc faucibus a pellentesque sit amet. Luctus venenatis lectus magna fringilla. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Amet est placerat in egestas erat. Erat imperdiet sed euismod nisi. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Eu nisl nunc mi ipsum. Tortor at risus viverra adipiscing at in tellus integer feugiat. Metus vulputate eu scelerisque felis imperdiet proin. Feugiat pretium nibh ipsum consequat nisl vel. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. A condimentum vitae sapien pellentesque. Amet commodo nulla facilisi nullam vehicula ipsum a. Mauris ultrices eros in cursus turpis massa. Tristique senectus et netus et. Leo integer malesuada nunc vel risus commodo viverra. Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
 Ut ornare lectus sit amet est. Cras pulvinar mattis nunc sed blandit. Quam elementum pulvinar etiam non quam. Proin fermentum leo vel orci porta non. Diam quis enim lobortis scelerisque fermentum dui faucibus. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Elementum facilisis leo vel fringilla. Malesuada bibendum arcu vitae elementum. Pharetra convallis posuere morbi leo urna molestie at elementum. Ultricies leo integer malesuada nunc. Maecenas sed enim ut sem viverra aliquet eget sit amet. Elementum nibh tellus molestie nunc non blandit massa enim nec. Eu non diam phasellus vestibulum lorem sed risus. Vel turpis nunc eget lorem dolor sed viverra ipsum nunc. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Nullam non nisi est sit amet facilisis. Ornare arcu dui vivamus arcu felis bibendum ut tristique.
@@ -92,10 +96,10 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := random.LoremSentence(tt.count)
+			got := random.LoremSentence(tt.args.count)
 			t.Run(tt.name, func(t *testing.T) {
-				if got != tt.output {
-					t.Error("Got:", got, "Want", tt.output)
+				if got != tt.want {
+					t.Error("Got:", got, "Want", tt.want)
 				}
 			})
 		})
@@ -103,17 +107,19 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 }
 
 func TestLoremCharacter(t *testing.T) {
+	type args struct {
+		count int
+	}
 	tests := []struct {
-		name   string
-		count  int
-		output string
+		name string
+		args args
+		want string
 	}{
-
-		{"Zero", 0, ""},
-		{"One Character", 1, "L"},
-		{"Two Characters", 2, "Lo"},
-		{"With Space", 6, "Lorem "},
-		{"80000< Characters", 80000, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
+		{"Zero", args{count: 0}, ""},
+		{"One Character", args{count: 1}, "L"},
+		{"Two Characters", args{count: 2}, "Lo"},
+		{"With Space", args{count: 6}, "Lorem "},
+		{"80000< Characters", args{count: 80000}, fmt.Sprint(`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Est pellentesque elit ullamcorper dignissim cras. Augue eget arcu dictum varius. Pellentesque sit amet porttitor eget dolor. Sapien pellentesque habitant morbi tristique senectus et netus et. Vel turpis nunc eget lorem dolor. Congue mauris rhoncus aenean vel. Imperdiet proin fermentum leo vel orci. Neque egestas congue quisque egestas diam. Ipsum suspendisse ultrices gravida dictum fusce. Commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio facilisis.
 Tristique sollicitudin nibh sit amet commodo. Pharetra magna ac placerat vestibulum. Felis donec et odio pellentesque diam volutpat commodo. Feugiat nibh sed pulvinar proin gravida hendrerit. Risus nullam eget felis eget nunc. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Nibh praesent tristique magna sit. Morbi tincidunt ornare massa eget egestas. Sollicitudin nibh sit amet commodo nulla. Nunc sed velit dignissim sodales ut eu sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Tempus imperdiet nulla malesuada pellentesque elit eget. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Magna fringilla urna porttitor rhoncus dolor purus non enim. At risus viverra adipiscing at in tellus integer feugiat. A cras semper auctor neque. Consectetur libero id faucibus nisl tincidunt eget nullam non. Eu mi bibendum neque egestas congue quisque egestas diam in.
 Nunc faucibus a pellentesque sit amet. Luctus venenatis lectus magna fringilla. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Amet est placerat in egestas erat. Erat imperdiet sed euismod nisi. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Eu nisl nunc mi ipsum. Tortor at risus viverra adipiscing at in tellus integer feugiat. Metus vulputate eu scelerisque felis imperdiet proin. Feugiat pretium nibh ipsum consequat nisl vel. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. A condimentum vitae sapien pellentesque. Amet commodo nulla facilisi nullam vehicula ipsum a. Mauris ultrices eros in cursus turpis massa. Tristique senectus et netus et. Leo integer malesuada nunc vel risus commodo viverra. Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
 Ut ornare lectus sit amet est. Cras pulvinar mattis nunc sed blandit. Quam elementum pulvinar etiam non quam. Proin fermentum leo vel orci porta non. Diam quis enim lobortis scelerisque fermentum dui faucibus. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Elementum facilisis leo vel fringilla. Malesuada bibendum arcu vitae elementum. Pharetra convallis posuere morbi leo urna molestie at elementum. Ultricies leo integer malesuada nunc. Maecenas sed enim ut sem viverra aliquet eget sit amet. Elementum nibh tellus molestie nunc non blandit massa enim nec. Eu non diam phasellus vestibulum lorem sed risus. Vel turpis nunc eget lorem dolor sed viverra ipsum nunc. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Nullam non nisi est sit amet facilisis. Ornare arcu dui vivamus arcu felis bibendum ut tristique.
@@ -126,10 +132,10 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := random.LoremCharacter(tt.count)
+			got := random.LoremCharacter(tt.args.count)
 			t.Run(tt.name, func(t *testing.T) {
-				if got != tt.output {
-					t.Error("Got:", got, "Want", tt.output)
+				if got != tt.want {
+					t.Error("Got:", got, "Want", tt.want)
 				}
 			})
 		})
