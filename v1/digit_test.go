@@ -19,7 +19,7 @@ func TestDigit(t *testing.T) {
 			got := random.Digit()
 			t.Run(tt.name, func(t *testing.T) {
 				if !inDigits(got) {
-					t.Error("Got:", got, ",", "Want: [1-9]")
+					t.Error("Got:", got, "Want:", digits)
 				}
 			})
 		}

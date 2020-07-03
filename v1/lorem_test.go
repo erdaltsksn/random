@@ -28,7 +28,7 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 			got := random.Lorem()
 			t.Run(tt.name, func(t *testing.T) {
 				if got != tt.want {
-					t.Error("Got:", got, "Want", tt.want)
+					t.Error("Got:", got, "Want:", tt.want)
 				}
 			})
 		})
@@ -64,7 +64,7 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 			got := random.LoremParagraph(tt.args.count)
 			t.Run(tt.name, func(t *testing.T) {
 				if got != tt.want {
-					t.Error("Got:", got, "Want", tt.want)
+					t.Error("Got:", got, "Want:", tt.want)
 				}
 			})
 		})
@@ -99,7 +99,7 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 			got := random.LoremSentence(tt.args.count)
 			t.Run(tt.name, func(t *testing.T) {
 				if got != tt.want {
-					t.Error("Got:", got, "Want", tt.want)
+					t.Error("Got:", got, "Want:", tt.want)
 				}
 			})
 		})
@@ -135,7 +135,7 @@ Nisi scelerisque eu ultrices vitae auctor eu augue. Eu feugiat pretium nibh ipsu
 			got := random.LoremCharacter(tt.args.count)
 			t.Run(tt.name, func(t *testing.T) {
 				if got != tt.want {
-					t.Error("Got:", got, "Want", tt.want)
+					t.Error("Got:", got, "Want:", tt.want)
 				}
 			})
 		})

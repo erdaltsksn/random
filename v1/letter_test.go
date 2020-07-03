@@ -25,7 +25,7 @@ func TestLetter(t *testing.T) {
 				got := random.Letter()
 				t.Run(tt.name, func(t *testing.T) {
 					if !inLetters(got, allLetters) {
-						t.Error("Got:", got, "Want", allLetters)
+						t.Error("Got:", got, "Want:", allLetters)
 					}
 				})
 			}
