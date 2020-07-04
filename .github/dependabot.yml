@@ -7,5 +7,4 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-    labels:
-      - "" # No Label
+    labels: [ ] # No Label
