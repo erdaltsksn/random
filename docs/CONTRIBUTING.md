@@ -62,7 +62,7 @@ The following is the list of supported scopes:
 
 - **(*)** Multiple scopes or Unknown.
 - **(devops)** e.g. git, travis, pre-commit, netlify, heroku, npm, gulp and etc.
-- **(readme)** e.g. readme, changelog, code of conduct, license and etc.
+- **(readme)** e.g. readme, contributing, changelog, license and etc.
 - **(cmd)** Root command and shared functions.
 - **(pkg)** Anything related to the library.
 
