@@ -1,12 +1,12 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
-// digitCmd represents the digit command
+// digitCmd represents the digit command.
 var digitCmd = &cobra.Command{
 	Use:   "digit",
 	Short: "Generates a random digit",

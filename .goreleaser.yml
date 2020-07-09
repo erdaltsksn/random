@@ -3,12 +3,13 @@ before:
     # You may remove this if you don't use go modules.
     - go mod download
 builds:
-- main:
+-
+  # Path to main.go file or main package. Default is `.`.
+  main: ./cmd/main.go
   env:
   - CGO_ENABLED=0
-    # GOOS list to build for.
-    # For more info refer to: https://golang.org/doc/install/source#environment
-    # Defaults are darwin and linux.
+    # GOOS list to build for. Defaults are darwin and linux.
+    # For more info: https://golang.org/doc/install/source#environment
   goos:
   - darwin
   - linux

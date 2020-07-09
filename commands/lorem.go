@@ -1,14 +1,14 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
 var count int
 
-// loremCmd represents the lorem command
+// loremCmd represents the lorem command.
 var loremCmd = &cobra.Command{
 	Use:   "lorem",
 	Short: "Generate a dummy text",

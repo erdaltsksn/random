@@ -27,6 +27,7 @@ request!
 ### Prerequisites
 
 - [Git](https://git-scm.com)
+- [Golang](https://golang.org)
 
 ## Commit Message Guidelines
 
@@ -65,9 +66,19 @@ The following is the list of supported scopes:
 - **(readme)** e.g. readme, contributing, changelog, license and etc.
 - **(cmd)** Root command and shared functions.
 - **(pkg)** Anything related to the library.
+- **(card)**
+- **(digit)**
+- **(letter)**
+- **(lorem)**
 
-**NOTE:** Every generator (letter,lorem,country and etc.) can be used as scope
-as well.
+#### Old / Deprecated Scopes
+
+Some of the scopes have become old/deprecated. The following is the list and
+their newer equivalents.
+
+| OLD                    | NEW                                                 |
+|------------------------|-----------------------------------------------------|
+| **(pkg)**              | `REMOVED`                                           |
 
 ### Revert and Merge
 

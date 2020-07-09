@@ -1,12 +1,12 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
-// countryCmd represents the country command
+// countryCmd represents the country command.
 var countryCmd = &cobra.Command{
 	Use:   "country",
 	Short: "Generates a random country name",

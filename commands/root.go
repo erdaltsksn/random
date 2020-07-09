@@ -1,11 +1,11 @@
-package cmd
+package commands
 
 import (
 	"github.com/erdaltsksn/cui"
 	"github.com/spf13/cobra"
 )
 
-// rootCmd represents the base command when called without any subcommands
+// rootCmd represents the base command when called without any subcommands.
 var rootCmd = &cobra.Command{
 	Use:   "random",
 	Short: "This app helps you generate random data",
@@ -24,7 +24,7 @@ func Execute() {
 	}
 }
 
-// GetRootCmd returns the instance of root command
+// GetRootCmd returns the instance of root command.
 func GetRootCmd() *cobra.Command {
 	return rootCmd
 }

@@ -1,12 +1,12 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
-// letterCmd represents the letter command
+// letterCmd represents the letter command.
 var letterCmd = &cobra.Command{
 	Use:   "letter",
 	Short: "Generates a random letter",

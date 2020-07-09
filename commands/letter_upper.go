@@ -1,13 +1,13 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
-// upperCmd represents the upper command
-var upperCmd = &cobra.Command{
+// letterUpperCmd represents the upper command.
+var letterUpperCmd = &cobra.Command{
 	Use:   "upper",
 	Short: "Generates a random uppercase letter",
 	Long:  `Generates a random uppercase latin letter in the range of A-Z.`,
@@ -17,5 +17,5 @@ var upperCmd = &cobra.Command{
 }
 
 func init() {
-	letterCmd.AddCommand(upperCmd)
+	letterCmd.AddCommand(letterUpperCmd)
 }

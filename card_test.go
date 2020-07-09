@@ -1,10 +1,10 @@
-package v1_test
+package random_test
 
 import (
 	"reflect"
 	"testing"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
 func TestGetRandomCardType(t *testing.T) {

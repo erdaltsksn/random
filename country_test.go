@@ -1,9 +1,9 @@
-package v1_test
+package random_test
 
 import (
 	"testing"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
 func TestCountry(t *testing.T) {

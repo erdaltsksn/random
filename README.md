@@ -14,10 +14,16 @@ Faker.
 
 ## Getting Started
 
-### 1. Get the package and install the application.
+### 1. Install the application.
 
 ```sh
-go get github.com/erdaltsksn/random
+brew install erdaltsksn/tap/random
+```
+
+### 2. Run the CLI application.
+
+```sh
+random <COMMAND>
 ```
 
 ## Installation
@@ -34,7 +40,7 @@ brew install erdaltsksn/tap/random
 go get github.com/erdaltsksn/random
 ```
 
-## Updating
+## Updating / Upgrading
 
 ### Using Homebrew
 
@@ -63,7 +69,7 @@ package main
 import (
 	"fmt"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
 func main() {

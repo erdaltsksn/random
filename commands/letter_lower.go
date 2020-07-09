@@ -1,13 +1,13 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
-// lowerCmd represents the lower command
-var lowerCmd = &cobra.Command{
+// letterLowerCmd represents the lower command.
+var letterLowerCmd = &cobra.Command{
 	Use:   "lower",
 	Short: "Generates a random lowercase letter",
 	Long:  `Generates a random lowercase latin letter in the range of a-z.`,
@@ -17,5 +17,5 @@ var lowerCmd = &cobra.Command{
 }
 
 func init() {
-	letterCmd.AddCommand(lowerCmd)
+	letterCmd.AddCommand(letterLowerCmd)
 }

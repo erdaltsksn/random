@@ -1,14 +1,14 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
 var cardType string
 
-// cardCmd represents the card command
+// cardCmd represents the card command.
 var cardCmd = &cobra.Command{
 	Use:   "card",
 	Short: "Generate a random card number",
@@ -22,7 +22,7 @@ func init() {
 	rootCmd.AddCommand(cardCmd)
 
 	// Here you will define your flags and configuration settings.
-	cardCmd.PersistentFlags().StringVarP(&cardType, "type", "t", "",
+	cardCmd.Flags().StringVarP(&cardType, "type", "t", "",
 		`Which card type should be used. Available cards:
 - AmericanExpress
 - DinersClub

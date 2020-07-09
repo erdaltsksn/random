@@ -1,13 +1,13 @@
-package cmd
+package commands
 
 import (
 	"github.com/spf13/cobra"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
-// paragraphCmd represents the paragraph command
-var paragraphCmd = &cobra.Command{
+// loremParagraphCmd represents the paragraph command.
+var loremParagraphCmd = &cobra.Command{
 	Use:     "paragraph",
 	Aliases: []string{"p"},
 	Short:   "Generate random text",
@@ -18,5 +18,5 @@ var paragraphCmd = &cobra.Command{
 }
 
 func init() {
-	loremCmd.AddCommand(paragraphCmd)
+	loremCmd.AddCommand(loremParagraphCmd)
 }

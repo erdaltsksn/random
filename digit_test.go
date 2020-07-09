@@ -1,9 +1,9 @@
-package v1_test
+package random_test
 
 import (
 	"testing"
 
-	random "github.com/erdaltsksn/random/v1"
+	"github.com/erdaltsksn/random"
 )
 
 var digits = []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}

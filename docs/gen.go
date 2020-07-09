@@ -5,13 +5,12 @@ import (
 
 	"github.com/spf13/cobra/doc"
 
-	"github.com/erdaltsksn/random/cmd"
+	"github.com/erdaltsksn/random/commands"
 )
 
 func main() {
-	cmd.GetRootCmd().DisableAutoGenTag = true
-	err := doc.GenMarkdownTree(cmd.GetRootCmd(), "./docs")
-	if err != nil {
+	commands.GetRootCmd().DisableAutoGenTag = true
+	if err := doc.GenMarkdownTree(commands.GetRootCmd(), "./docs"); err != nil {
 		log.Fatal(err)
 	}
 }

@@ -8,3 +8,8 @@ updates:
     schedule:
       interval: "daily"
     labels: [ ] # No Label
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels: [ ]

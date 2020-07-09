@@ -1,4 +1,4 @@
-package cmd
+package commands
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"github.com/erdaltsksn/cui"
 )
 
-// printOutput is used to print the result and copy it into system clipboard
+// printOutput is used to print the result and copy it into system clipboard.
 func printOutput(o interface{}) {
 	output := fmt.Sprint(o)
 	fmt.Println(output)

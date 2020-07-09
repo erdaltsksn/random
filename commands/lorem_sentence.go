@@ -1,13 +1,12 @@
-package cmd
+package commands
 
 import (
+	"github.com/erdaltsksn/random"
 	"github.com/spf13/cobra"
-
-	random "github.com/erdaltsksn/random/v1"
 )
 
-// sentenceCmd represents the sentence command
-var sentenceCmd = &cobra.Command{
+// loremSentenceCmd represents the sentence command.
+var loremSentenceCmd = &cobra.Command{
 	Use:     "sentence",
 	Aliases: []string{"s"},
 	Short:   "Generate random text",
@@ -18,5 +17,5 @@ var sentenceCmd = &cobra.Command{
 }
 
 func init() {
-	loremCmd.AddCommand(sentenceCmd)
+	loremCmd.AddCommand(loremSentenceCmd)
 }
