@@ -65,11 +65,11 @@ The following is the list of supported scopes:
 - **(devops)** e.g. git, travis, pre-commit, netlify, heroku, npm, gulp and etc.
 - **(readme)** e.g. readme, contributing, changelog, license and etc.
 - **(cmd)** Root command and shared functions.
-- **(pkg)** Anything related to the library.
 - **(card)**
 - **(digit)**
 - **(letter)**
 - **(lorem)**
+- **(password)**
 
 #### Old / Deprecated Scopes
 
