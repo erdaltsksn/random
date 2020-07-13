@@ -16,7 +16,7 @@ func TestState(t *testing.T) {
 		for i := 0; i < 1000; i++ {
 			got := random.State()
 			t.Run(tt.name, func(t *testing.T) {
-				if !inCountries(got) {
+				if !inStates(got) {
 					t.Error("Got:", got, "Want:", random.StateList)
 				}
 			})
