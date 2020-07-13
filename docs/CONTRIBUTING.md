@@ -70,6 +70,7 @@ The following is the list of supported scopes:
 - **(letter)**
 - **(lorem)**
 - **(password)**
+- **(state)**
 
 #### Old / Deprecated Scopes
 
