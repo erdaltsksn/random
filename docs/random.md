@@ -22,5 +22,6 @@ address, hex color etc.
 * [random lorem](random_lorem.md)	 - Generate a dummy text
 * [random password](random_password.md)	 - Generate password
 * [random state](random_state.md)	 - Generate a random state
+* [random user-agent](random_user-agent.md)	 - Generate a random user-agent
 * [random version](random_version.md)	 - Prints the app's version
 

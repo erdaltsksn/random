@@ -71,6 +71,7 @@ The following is the list of supported scopes:
 - **(lorem)**
 - **(password)**
 - **(state)**
+- **(user-agent)**
 
 #### Old / Deprecated Scopes
 

@@ -1,8 +1,9 @@
 package commands
 
 import (
-	"github.com/erdaltsksn/random"
 	"github.com/spf13/cobra"
+
+	"github.com/erdaltsksn/random"
 )
 
 // stateCmd represents the state command.
