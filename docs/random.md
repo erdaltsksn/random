@@ -20,6 +20,7 @@ address, hex color etc.
 * [random digit](random_digit.md)	 - Generates a random digit
 * [random letter](random_letter.md)	 - Generates a random letter
 * [random lorem](random_lorem.md)	 - Generate a dummy text
+* [random name](random_name.md)	 - Generate a random name
 * [random password](random_password.md)	 - Generate password
 * [random state](random_state.md)	 - Generate a random state
 * [random user-agent](random_user-agent.md)	 - Generate a random user-agent
