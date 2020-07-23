@@ -79,9 +79,9 @@ The following is the list of supported scopes:
 Some of the scopes have become old/deprecated. The following is the list and
 their newer equivalents.
 
-| OLD                    | NEW                                                 |
-|------------------------|-----------------------------------------------------|
-| **(pkg)**              | `REMOVED`                                           |
+| OLD                                  | NEW                                   |
+|--------------------------------------|---------------------------------------|
+| (pkg)                                | `REMOVED`                             |
 
 ### Revert and Merge
 
