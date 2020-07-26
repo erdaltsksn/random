@@ -69,7 +69,7 @@ The following is the list of supported scopes:
 - **(digit)**
 - **(letter)**
 - **(lorem)**
-- **(name)**
+- **(name)** Full Name, First name and Last name.
 - **(password)**
 - **(state)**
 - **(user-agent)**

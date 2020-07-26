@@ -14,10 +14,10 @@ var (
 // nameCmd represents the name command.
 var nameCmd = &cobra.Command{
 	Use:   "name",
-	Short: "Generate a random name",
-	Long:  `Generate a random name using gender and country specified.`,
+	Short: "Generate a random full name",
+	Long:  `Generate a random full name using gender and country specified.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		printOutput(random.Name(gender, country))
+		printOutput(random.Fullname(gender, country))
 	},
 }
 
@@ -25,12 +25,12 @@ func init() {
 	rootCmd.AddCommand(nameCmd)
 
 	// Here you will define your flags and configuration settings.
-	nameCmd.Flags().StringVarP(&gender, "gender", "g", "",
-		`Which gender should be used. Avaible genders:
+	nameCmd.PersistentFlags().StringVarP(&gender, "gender", "g", "",
+		`Which gender should be used. Available genders:
 - Male
 - Female`,
 	)
-	nameCmd.Flags().StringVarP(&country, "country", "c", "",
+	nameCmd.PersistentFlags().StringVarP(&country, "country", "c", "",
 		`Which country should be used. Available countries:
 - USA
 - Germany

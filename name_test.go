@@ -6,7 +6,7 @@ import (
 	"github.com/erdaltsksn/random"
 )
 
-func TestName(t *testing.T) {
+func TestFirstName(t *testing.T) {
 	type args struct {
 		gender  string
 		country string
@@ -28,22 +28,47 @@ func TestName(t *testing.T) {
 	}
 	for _, tt := range tests {
 		for i := 0; i < 1000; i++ {
-			got := random.Name(tt.args.gender, tt.args.country)
+			got := random.Firstname(tt.args.gender, tt.args.country)
 			t.Run(tt.name, func(t *testing.T) {
-				if !inNames(got, tt.args.gender, tt.args.country) {
-					t.Error("Got:", got, "Want:", random.NameList)
+				if !inNames(random.FirstNameList, got, tt.args.gender, tt.args.country) {
+					t.Error("Got:", got, "Want:", random.FirstNameList)
 				}
 			})
 		}
 	}
 }
 
-func inNames(n, gender, country string) bool {
+func TestLastName(t *testing.T) {
+	type args struct {
+		country string
+	}
+	tests := []struct {
+		name string
+		args args
+	}{
+		{"Empty", args{}},
+		{"Country 1", args{country: "USA"}},
+		{"Country 2", args{country: "Turkey"}},
+		{"Country Invalid", args{country: "Invalid_Country"}},
+	}
+	for _, tt := range tests {
+		for i := 0; i < 1000; i++ {
+			got := random.Lastname(tt.args.country)
+			t.Run(tt.name, func(t *testing.T) {
+				if !inNames(random.LastNameList, got, "", tt.args.country) {
+					t.Error("Got:", got, "Want:", random.LastNameList)
+				}
+			})
+		}
+	}
+}
+
+func inNames(list []random.NameStr, n, gender, country string) bool {
 	var dataWithGender []random.NameStr
 	var data []random.NameStr
 
 	if gender != "" {
-		for _, v := range random.NameList {
+		for _, v := range list {
 			if v.Gender == gender {
 				dataWithGender = append(dataWithGender, v)
 			}
@@ -51,7 +76,7 @@ func inNames(n, gender, country string) bool {
 	}
 
 	if len(dataWithGender) == 0 {
-		dataWithGender = random.NameList
+		dataWithGender = list
 	}
 
 	if country != "" {
@@ -63,7 +88,7 @@ func inNames(n, gender, country string) bool {
 	}
 
 	if len(data) == 0 {
-		data = random.NameList
+		data = list
 	}
 
 	for _, v := range data {

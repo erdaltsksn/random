@@ -1,16 +1,22 @@
-## random name
+## random name first
 
-Generate a random full name
+Generate a random name
 
 ### Synopsis
 
-Generate a random full name using gender and country specified.
+Generate a random name using gender and country specified.
 
 ```
-random name [flags]
+random name first [flags]
 ```
 
 ### Options
+
+```
+  -h, --help   help for first
+```
+
+### Options inherited from parent commands
 
 ```
   -c, --country string   Which country should be used. Available countries:
@@ -22,12 +28,9 @@ random name [flags]
   -g, --gender string    Which gender should be used. Available genders:
                          - Male
                          - Female
-  -h, --help             help for name
 ```
 
 ### SEE ALSO
 
-* [random](random.md)	 - This app helps you generate random data
-* [random name first](random_name_first.md)	 - Generate a random name
-* [random name last](random_name_last.md)	 - Generate a random name
+* [random name](random_name.md)	 - Generate a random full name
 
