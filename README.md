@@ -94,6 +94,11 @@ welcome. See [CONTRIBUTING](docs/CONTRIBUTING.md) for more information.
 If you discover a security vulnerability within this project, please follow our
 [Security Policy Guide](docs/SECURITY.md).
 
+## Code of Conduct
+
+This project adheres to the Contributor Covenant [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+By participating, you are expected to uphold this code.
+
 ## Disclaimer
 
 In no event shall we be liable to you or any third parties for any special,
