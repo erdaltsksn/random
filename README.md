@@ -89,6 +89,11 @@ random [command] --help
 If you want to contribute to this project and make it better, your help is very
 welcome. See [CONTRIBUTING](docs/CONTRIBUTING.md) for more information.
 
+## Security Policy
+
+If you discover a security vulnerability within this project, please follow our
+[Security Policy Guide](docs/SECURITY.md).
+
 ## Disclaimer
 
 In no event shall we be liable to you or any third parties for any special,
