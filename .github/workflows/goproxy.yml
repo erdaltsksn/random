@@ -1,0 +1,16 @@
+name: Go Proxy
+
+on:
+  push:
+    tags:
+    - 'v*.*.*'
+
+jobs:
+  proxy:
+    name: Proxy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get the Go package
+      run: |
+        GOPROXY=https://proxy.golang.org GO111MODULE=on go get github.com/$GITHUB_REPOSITORY@${GITHUB_REF##*/}
