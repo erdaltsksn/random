@@ -1,6 +1,6 @@
 # Random
 
-[![GoDoc](https://godoc.org/github.com/erdaltsksn/random?status.svg)](https://godoc.org/github.com/erdaltsksn/random)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/erdaltsksn/random)](https://pkg.go.dev/github.com/erdaltsksn/random)
 ![Go](https://github.com/erdaltsksn/random/workflows/Go/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/erdaltsksn/random)](https://goreportcard.com/report/github.com/erdaltsksn/random)
 
