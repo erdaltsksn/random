@@ -63,9 +63,9 @@ func TestLastName(t *testing.T) {
 	}
 }
 
-func inNames(list []random.NameStr, n, gender, country string) bool {
-	var dataWithGender []random.NameStr
-	var data []random.NameStr
+func inNames(list []random.Person, n, gender, country string) bool {
+	var dataWithGender []random.Person
+	var data []random.Person
 
 	if gender != "" {
 		for _, v := range list {

@@ -1,7 +1,7 @@
 package random
 
 // FirstNameList holds the data for names with gender and country.
-var FirstNameList = []NameStr{
+var FirstNameList = []Person{
 	{Name: "Emma", Gender: "Female", Country: "USA"},
 	{Name: "Olivia", Gender: "Female", Country: "USA"},
 	{Name: "Sophia", Gender: "Female", Country: "USA"},
@@ -2413,7 +2413,7 @@ var FirstNameList = []NameStr{
 }
 
 // LastNameList holds the data for last names with country.
-var LastNameList = []NameStr{
+var LastNameList = []Person{
 	{Name: "Smith", Country: "USA"},
 	{Name: "Johnson", Country: "USA"},
 	{Name: "Williams", Country: "USA"},

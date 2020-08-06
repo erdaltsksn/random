@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-// NameStr is a struct hold data.
-type NameStr struct {
+// Person is a struct hold data.
+type Person struct {
 	Name    string
 	Gender  string
 	Country string
@@ -15,8 +15,8 @@ type NameStr struct {
 
 // Firstname generates a random first name according specified gender and country.
 func Firstname(gender, country string) string {
-	var dataWithGender []NameStr
-	var data []NameStr
+	var dataWithGender []Person
+	var data []Person
 
 	if gender != "" {
 		for _, v := range FirstNameList {
@@ -49,7 +49,7 @@ func Firstname(gender, country string) string {
 
 // Lastname generates a random last name according specified gender and country.
 func Lastname(country string) string {
-	var data []NameStr
+	var data []Person
 
 	if country != "" {
 		for _, v := range LastNameList {
