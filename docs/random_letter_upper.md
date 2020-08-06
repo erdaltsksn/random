@@ -1,10 +1,10 @@
 ## random letter upper
 
-Generates a random uppercase letter
+Generate a random uppercase letter
 
 ### Synopsis
 
-Generates a random uppercase latin letter in the range of A-Z.
+Generate a random uppercase latin letter in the range of A-Z.
 
 ```
 random letter upper [flags]
@@ -18,5 +18,5 @@ random letter upper [flags]
 
 ### SEE ALSO
 
-* [random letter](random_letter.md)	 - Generates a random letter
+* [random letter](random_letter.md)	 - Generate a random letter
 

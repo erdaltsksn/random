@@ -16,13 +16,13 @@ address, hex color etc.
 ### SEE ALSO
 
 * [random card](random_card.md)	 - Generate a random card number
-* [random country](random_country.md)	 - Generates a random country name
-* [random digit](random_digit.md)	 - Generates a random digit
-* [random letter](random_letter.md)	 - Generates a random letter
+* [random country](random_country.md)	 - Generate a random country name
+* [random digit](random_digit.md)	 - Generate a random digit
+* [random letter](random_letter.md)	 - Generate a random letter
 * [random lorem](random_lorem.md)	 - Generate a dummy text
 * [random name](random_name.md)	 - Generate a random full name
-* [random password](random_password.md)	 - Generate password
+* [random password](random_password.md)	 - Generate a password
 * [random state](random_state.md)	 - Generate a random state
 * [random user-agent](random_user-agent.md)	 - Generate a random user-agent
-* [random version](random_version.md)	 - Prints the app's version
+* [random version](random_version.md)	 - Print the app's version
 

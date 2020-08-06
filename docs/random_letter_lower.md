@@ -1,10 +1,10 @@
 ## random letter lower
 
-Generates a random lowercase letter
+Generate a random lowercase letter
 
 ### Synopsis
 
-Generates a random lowercase latin letter in the range of a-z.
+Generate a random lowercase latin letter in the range of a-z.
 
 ```
 random letter lower [flags]
@@ -18,5 +18,5 @@ random letter lower [flags]
 
 ### SEE ALSO
 
-* [random letter](random_letter.md)	 - Generates a random letter
+* [random letter](random_letter.md)	 - Generate a random letter
 

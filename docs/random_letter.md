@@ -1,10 +1,10 @@
 ## random letter
 
-Generates a random letter
+Generate a random letter
 
 ### Synopsis
 
-Generates a random latin letter in the range of a-Z and A-Z.
+Generate a random latin letter in the range of a-Z and A-Z.
 
 ```
 random letter [flags]
@@ -19,6 +19,6 @@ random letter [flags]
 ### SEE ALSO
 
 * [random](random.md)	 - This app helps you generate random data
-* [random letter lower](random_letter_lower.md)	 - Generates a random lowercase letter
-* [random letter upper](random_letter_upper.md)	 - Generates a random uppercase letter
+* [random letter lower](random_letter_lower.md)	 - Generate a random lowercase letter
+* [random letter upper](random_letter_upper.md)	 - Generate a random uppercase letter
 

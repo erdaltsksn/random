@@ -1,10 +1,10 @@
 ## random version
 
-Prints the app's version
+Print the app's version
 
 ### Synopsis
 
-Prints the app's version. This app uses semver and the version value
+Print the app's version. This app uses semver and the version value
 is automatically generated while building.
 
 ```

@@ -10,7 +10,7 @@ var length int
 // passwordCmd represents the password command.
 var passwordCmd = &cobra.Command{
 	Use:   "password",
-	Short: "Generate password",
+	Short: "Generate a password",
 	Long:  `Generate a random, secure password`,
 	Run: func(cmd *cobra.Command, args []string) {
 		printOutput(random.Password(length))

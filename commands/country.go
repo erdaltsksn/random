@@ -9,8 +9,8 @@ import (
 // countryCmd represents the country command.
 var countryCmd = &cobra.Command{
 	Use:   "country",
-	Short: "Generates a random country name",
-	Long:  `Generates a random country name using the pre-defined list.`,
+	Short: "Generate a random country name",
+	Long:  `Generate a random country name using the pre-defined list.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		printOutput(random.Country())
 	},

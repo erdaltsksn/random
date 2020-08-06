@@ -1,6 +1,6 @@
 ## random password
 
-Generate password
+Generate a password
 
 ### Synopsis
 

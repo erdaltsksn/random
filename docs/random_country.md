@@ -1,10 +1,10 @@
 ## random country
 
-Generates a random country name
+Generate a random country name
 
 ### Synopsis
 
-Generates a random country name using the pre-defined list.
+Generate a random country name using the pre-defined list.
 
 ```
 random country [flags]
