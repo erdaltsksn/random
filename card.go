@@ -6,14 +6,14 @@ import (
 	"time"
 )
 
-// CardType holds the card type information
+// CardType holds the card type information.
 type CardType struct {
 	Name   string
 	Length []int
 	Prefix []string
 }
 
-// SupportedCards holds all supported card list
+// SupportedCards holds all supported card list.
 var SupportedCards = []CardType{
 	{
 		Name:   "AmericanExpress",
@@ -117,7 +117,7 @@ var SupportedCards = []CardType{
 	},
 }
 
-// GetRandomCardType return a random card type
+// GetRandomCardType return a random card type.
 func GetRandomCardType() CardType {
 	rand.Seed(time.Now().Unix())
 	randType := rand.Intn(len(SupportedCards))
@@ -125,7 +125,7 @@ func GetRandomCardType() CardType {
 	return SupportedCards[randType]
 }
 
-// GetCardType returns card type named or random card type
+// GetCardType returns card type named or random card type.
 func GetCardType(name string) CardType {
 	for _, v := range SupportedCards {
 		if v.Name == name {
@@ -136,7 +136,7 @@ func GetCardType(name string) CardType {
 	return GetRandomCardType()
 }
 
-// Generate returns card information according to Card Type
+// Generate returns card information according to Card Type.
 func (c CardType) Generate() string {
 	rand.Seed(time.Now().Unix())
 

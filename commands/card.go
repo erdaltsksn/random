@@ -12,7 +12,7 @@ var cardType string
 var cardCmd = &cobra.Command{
 	Use:   "card",
 	Short: "Generate a random card number",
-	Long:  `Generates a random card number according to named card type.`,
+	Long:  `Generate a random card number according to named card type.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		printOutput(random.GetCardType(cardType).Generate())
 	},

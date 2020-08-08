@@ -252,7 +252,7 @@ var CountryList = []string{
 	"Zimbabwe",
 }
 
-// Country generate a random country name
+// Country generate a random country name.
 func Country() string {
 	rand.Seed(time.Now().UnixNano())
 

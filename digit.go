@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// Digit generate a random digit
+// Digit generate a random digit.
 func Digit() int {
 	rand.Seed(time.Now().UnixNano())
 
