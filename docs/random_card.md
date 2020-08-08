@@ -4,7 +4,7 @@ Generate a random card number
 
 ### Synopsis
 
-Generates a random card number according to named card type.
+Generate a random card number according to named card type.
 
 ```
 random card [flags]

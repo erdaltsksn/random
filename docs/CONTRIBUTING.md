@@ -73,6 +73,7 @@ The following is the list of supported scopes:
 - **(password)**
 - **(state)**
 - **(user-agent)**
+- **(tc)** Turkish Citizen Number
 
 #### Old / Deprecated Scopes
 

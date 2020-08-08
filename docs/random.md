@@ -23,6 +23,7 @@ address, hex color etc.
 * [random name](random_name.md)	 - Generate a random full name
 * [random password](random_password.md)	 - Generate a password
 * [random state](random_state.md)	 - Generate a random state
+* [random tc](random_tc.md)	 - Generate a random TC
 * [random user-agent](random_user-agent.md)	 - Generate a random user-agent
 * [random version](random_version.md)	 - Print the app's version
 
