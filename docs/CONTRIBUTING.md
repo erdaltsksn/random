@@ -71,6 +71,7 @@ The following is the list of supported scopes:
 - **(lorem)**
 - **(name)** Full Name, First name and Last name.
 - **(password)**
+- **(quote)** Use this also for `author`.
 - **(state)**
 - **(user-agent)**
 - **(tc)** Turkish Citizen Number
