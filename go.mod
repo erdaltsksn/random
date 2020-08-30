@@ -1,6 +1,6 @@
 module github.com/erdaltsksn/random
 
-go 1.14
+go 1.15
 
 require (
 	github.com/erdaltsksn/cui v0.4.0
