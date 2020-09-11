@@ -15,7 +15,7 @@ fmt: ## Run all formatings
 	go fmt ./...
 
 .PHONY: run
-run: ## Run all examples
+run: ## Run the application
 	make build
 	./bin/random
 
