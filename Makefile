@@ -33,6 +33,13 @@ coverage: ## Show test coverage
 docs: ## Generate documentation
 	go run docs/gen.go
 
+.PHONY: godoc
+godoc: ## Start local godoc server
+	@echo "See Documentation:"
+	@echo "\thttp://localhost:6060/pkg/github.com/erdaltsksn/random"
+	@echo "\n"
+	@godoc -http=:6060
+
 .PHONY: build
 build: ## Build the app
 	go build -o ./bin/random cmd/main.go
