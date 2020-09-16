@@ -6,9 +6,9 @@ labels: "Type: Question"
 
 # Support Question
 
-## What is your question?
+## Type_your_question_here?
 
-describe_your_question_here
+add_more_details_to_your_question_here
 
 ## What have you tried?
 
