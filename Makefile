@@ -23,6 +23,12 @@ run: ## Run the application
 test: ## Run all test
 	go test -v ./...
 
+.PHONY: coverage
+coverage: ## Show test coverage
+	@go test -coverprofile=coverage.out ./... > /dev/null
+	go tool cover -func=coverage.out
+	rm coverage.out
+
 .PHONY: docs
 docs: ## Generate documentation
 	go run docs/gen.go
