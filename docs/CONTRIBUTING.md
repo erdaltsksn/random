@@ -50,7 +50,7 @@ the **project history**.
 We use the commit message template from [dotfiles]. You may find any other
 additional *types*, *scopes*, and more information below.
 
-[dotfiles]: https://github.com/erdaltsksn/dotfiles/blob/master/git/.gittemplate
+[dotfiles]: https://github.com/erdaltsksn/dotfiles/blob/main/git/.gittemplate
 
 ### Types
 
@@ -104,7 +104,7 @@ system to support it.
 When you can't find a previous bug, open an issue keeping in mind the following
 considerations:
 
-- Try to reproduce the bug using the code found on the master branch
+- Try to reproduce the bug using the code found on the `main` branch
 - Copy and paste the full error message, including the `backtrace`
 - Be as detailed as possible and include any additional information
 
