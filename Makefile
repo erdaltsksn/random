@@ -18,7 +18,7 @@ test: ## Run all test
 coverage: ## Show test coverage
 	@go test -coverprofile=coverage.out ./... > /dev/null
 	go tool cover -func=coverage.out
-	rm coverage.out
+	@rm coverage.out
 
 .PHONY: docs
 docs: ## Generate documentation
@@ -27,10 +27,11 @@ docs: ## Generate documentation
 .PHONY: godoc
 godoc: ## Start local godoc server
 	@echo "See Documentation:"
-	@echo "\thttp://localhost:6060/pkg/github.com/erdaltsksn/random"
-	@echo "\n"
+	@echo "    http://localhost:6060/pkg/github.com/erdaltsksn/random"
+	@echo ""
 	@godoc -http=:6060
 
 .PHONY: clean
 clean: ## Clean all generated files
 	rm -rf ./vendor/
+	rm -rf ./go.sum
