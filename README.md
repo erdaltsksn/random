@@ -3,6 +3,7 @@
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/erdaltsksn/random)](https://pkg.go.dev/github.com/erdaltsksn/random)
 ![Go](https://github.com/erdaltsksn/random/workflows/Go/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/erdaltsksn/random)](https://goreportcard.com/report/github.com/erdaltsksn/random)
+![CodeQL](https://github.com/erdaltsksn/random/workflows/CodeQL/badge.svg)
 
 Random is a library and cli app to generate random data. This app also known as
 Faker.
