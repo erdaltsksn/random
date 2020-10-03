@@ -78,11 +78,15 @@ func main() {
 }
 ```
 
-### Getting Help
+## Getting Help
 
 ```sh
+# Getting help for related command.
 random --help
 random [command] --help
+
+# Show available `make` commands.
+make help
 ```
 
 ## Contributing
