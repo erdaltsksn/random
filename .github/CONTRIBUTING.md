@@ -8,7 +8,7 @@ project. Thank you for helping out and remember, no contribution is too small.
 
 ## Step by step contribution guide
 
-01. **Install** the [prerequisites](#prerequisites)
+01. **Install** the [**Requirements**](../README.md#requirements)
 02. **Fork** the repository and **Clone** the fork to your own machine
 03. **Open** an issue before working on your changes
 04. **Create** a git branch and **Start working** on your fix, feature and etc
@@ -24,66 +24,18 @@ project. Thank you for helping out and remember, no contribution is too small.
 **NOTE:** Be sure to get the latest from "**upstream**" before making a pull
 request!
 
-### Prerequisites
-
-- [Git](https://git-scm.com)
-- [Golang](https://golang.org)
-
 ## Commit Message Guidelines
 
 We have strict rules over how our **git commit messages** can be formatted. This
 leads to **more readable messages** that are easy to follow when looking through
 the **project history**.
 
-### Commit Message Format
-
-```sh
-<type>: (<scope>) <subject>
-<BLANK LINE>
-<type>: <body>
-<BLANK LINE>
-<type>: <footer>
-```
-
 ### Template
 
 We use the commit message template from [dotfiles]. You may find any other
-additional *types*, *scopes*, and more information below.
+additional *types*, and more information below (if there are any).
 
 [dotfiles]: https://github.com/erdaltsksn/dotfiles/blob/main/git/.gittemplate
-
-### Types
-
-As well as those specified in the [dotfiles] file, The following is the list of
-supported types:
-
-### Scopes
-
-The following is the list of supported scopes:
-
-- **(*)** Multiple scopes or Unknown.
-- **(devops)** e.g. git, travis, pre-commit, netlify, heroku, npm, gulp and etc.
-- **(readme)** e.g. readme, contributing, changelog, license and etc.
-- **(cmd)** Root command and shared functions.
-- **(card)**
-- **(digit)**
-- **(letter)**
-- **(lorem)**
-- **(name)** Full Name, First name and Last name.
-- **(password)**
-- **(quote)** Use this also for `author`.
-- **(state)**
-- **(user-agent)**
-- **(tc)** Turkish Citizen Number
-
-#### Old / Deprecated Scopes
-
-Some of the scopes have become old/deprecated. The following is the list and
-their newer equivalents.
-
-| OLD                                  | NEW                                   |
-|--------------------------------------|---------------------------------------|
-| (pkg)                                | `REMOVED`                             |
 
 ### Revert and Merge
 

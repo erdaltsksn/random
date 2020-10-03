@@ -87,16 +87,16 @@ random [command] --help
 ## Contributing
 
 If you want to contribute to this project and make it better, your help is very
-welcome. See [CONTRIBUTING](docs/CONTRIBUTING.md) for more information.
+welcome. See [CONTRIBUTING](.github/CONTRIBUTING.md) for more information.
 
 ## Security Policy
 
 If you discover a security vulnerability within this project, please follow our
-[Security Policy Guide](docs/SECURITY.md).
+[Security Policy Guide](.github/SECURITY.md).
 
 ## Code of Conduct
 
-This project adheres to the Contributor Covenant [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+This project adheres to the Contributor Covenant [Code of Conduct](.github/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code.
 
 ## Disclaimer
