@@ -6,7 +6,7 @@ labels: "Type: Question"
 
 # Support Question
 
-## Type_your_question_here?
+## Details
 
 add_more_details_to_your_question_here
 

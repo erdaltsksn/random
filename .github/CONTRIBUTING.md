@@ -9,10 +9,10 @@ project. Thank you for helping out and remember, no contribution is too small.
 ## Step by step contribution guide
 
 01. **Install** the [**Requirements**](../README.md#requirements)
-02. **Fork** the repository and **Clone** the fork to your own machine
+02. **Fork** the repository and **Clone** the fork to your machine
 03. **Open** an issue before working on your changes
-04. **Create** a git branch and **Start working** on your fix, feature and etc
-    on **its own branch**
+04. **Create** a git branch and **Start working** on your fix, feature, etc on
+    **its branch**
 05. **Create** and **Run** the **tests** (if there are any)
     - **Run** `go run docs/gen.go` to automatically generate command docs
 06. **Commit** your changes according to [**Commit Message Guidelines**](#commit-message-guidelines)
@@ -67,4 +67,4 @@ describing the details and possible use cases.
 
 ## Thanks
 
-Thank you to all who have contributed in this great project.
+Thank you to all who have contributed to this great project.

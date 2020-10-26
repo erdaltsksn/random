@@ -22,11 +22,11 @@ In addition, please include the following information along with your report
 - Type of issue (e.g. XSS, CSRF, SQL injection, etc.)
 - Step-by-step instructions to reproduce the issue
 - Proof-of-concept or exploit code (if possible)
-- An explanation who can exploit this vulnerability, and what they gain when
+- An explanation of who can exploit this vulnerability, and what they gain when
   doing so -- write an attack scenario. This will help us evaluate your report
   quickly, especially if the issue is complex.
 
-We'll endeavor to respond quickly, and will keep you updated of the progress
+We'll endeavor to respond quickly, and will keep you updated on the progress
 towards a fix and full announcement, and may ask for additional information.
 
 ## Thanks

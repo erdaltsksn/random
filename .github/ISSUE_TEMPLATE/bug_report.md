@@ -6,6 +6,10 @@ labels: "Type: Bug"
 
 # Bug Report
 
+## Details
+
+add_more_details_to_the_bug_here
+
 ## Current Behavior
 
 describe_the_bug_here
