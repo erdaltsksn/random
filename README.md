@@ -1,7 +1,7 @@
 # Random
 
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/erdaltsksn/random)](https://pkg.go.dev/github.com/erdaltsksn/random)
-![Go](https://github.com/erdaltsksn/random/workflows/Go/badge.svg)
+![Go (build)](https://github.com/erdaltsksn/random/workflows/Go/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/erdaltsksn/random)](https://goreportcard.com/report/github.com/erdaltsksn/random)
 ![CodeQL](https://github.com/erdaltsksn/random/workflows/CodeQL/badge.svg)
 
@@ -33,30 +33,14 @@ random <COMMAND>
 
 ## Installation
 
-### Using Homebrew
-
 ```sh
 brew install erdaltsksn/tap/random
 ```
 
-### Using Go Modules
-
-```sh
-go get github.com/erdaltsksn/random
-```
-
 ## Updating / Upgrading
-
-### Using Homebrew
 
 ```sh
 brew upgrade erdaltsksn/tap/random
-```
-
-### Using Go Modules
-
-```sh
-go get -u github.com/erdaltsksn/random
 ```
 
 ## Usage
@@ -88,9 +72,6 @@ func main() {
 # Getting help for related command.
 random --help
 random [command] --help
-
-# Show available `make` commands.
-make help
 ```
 
 ## Contributing
