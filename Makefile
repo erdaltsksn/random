@@ -24,13 +24,6 @@ coverage: ## Show test coverage
 docs: ## Generate documentation
 	go run docs/gen.go
 
-.PHONY: godoc
-godoc: ## Start local godoc server
-	@echo "See Documentation:"
-	@echo "    http://localhost:6060/pkg/github.com/erdaltsksn/random"
-	@echo ""
-	@godoc -http=:6060
-
 .PHONY: clean
 clean: ## Clean all generated files
 	rm -rf ./vendor/
