@@ -4,6 +4,12 @@
 help: ## Show this help
 	@egrep -h '\s##\s' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: clean
+clean: ## Clean all generated files
+	go clean
+	rm -rf ./vendor/
+	rm -rf ./go.sum
+
 .PHONY: fmt
 fmt: ## Run all formatings
 	go mod vendor
@@ -23,8 +29,3 @@ coverage: ## Show test coverage
 .PHONY: docs
 docs: ## Generate documentation
 	go run docs/gen.go
-
-.PHONY: clean
-clean: ## Clean all generated files
-	rm -rf ./vendor/
-	rm -rf ./go.sum
