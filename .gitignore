@@ -1,7 +1,7 @@
 # https://github.com/github/gitignore
 
-################################################################################
 ######################### Go ###################################################
+# https://raw.githubusercontent.com/github/gitignore/master/Go.gitignore
 ################################################################################
 # Binaries for programs and plugins
 *.exe

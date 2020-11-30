@@ -1,4 +1,4 @@
-name: Go
+name: Go (build)
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ ubuntu-latest, macOS-latest, windows-latest ]
 
     steps:
     - name: Check out code into $GITHUB_WORKSPACE directory
@@ -21,7 +21,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
-        go-version: ^1.15
+        go-version: 1.15.5
       id: go
 
     - name: Get dependencies

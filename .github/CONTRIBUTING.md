@@ -6,17 +6,22 @@ process.
 We are happy to welcome all contributions from anyone willing to improve this
 project. Thank you for helping out and remember, no contribution is too small.
 
+## Prerequisites
+
+- [Git](https://git-scm.com)
+- [Go](https://golang.org)
+
 ## Step by step contribution guide
 
-01. **Install** the [**Requirements**](../README.md#requirements)
-02. **Fork** the repository and **Clone** the fork to your machine
-03. **Open** an issue before working on your changes
-04. **Create** a git branch and **Start working** on your fix, feature, etc on
+01. **Open** an issue before working on your changes
+02. **Install** the [prerequisites](#prerequisites)
+03. **Create** a git branch and **start working** on your fix, feature, etc on
     **its branch**
-05. **Create** and **Run** the **tests** (if there are any)
-    - **Run** `go run docs/gen.go` to automatically generate command docs
-06. **Commit** your changes according to [**Commit Message Guidelines**](#commit-message-guidelines)
-07. **Push** the changes to your fork and **Create** a Pull Request for review
+04. **Add** and **run** the **tests**
+05. **Add** or **update** necessary **documentation**
+    - **Run** `make docs` to automatically generate command docs
+06. **Commit** your changes according to [Commit Message Guidelines](#commit-message-guidelines)
+07. **Push** your changes and **create** a **Pull Request** for review
 08. **Communicate** with the maintainer about the revisions
 09. **Be responsive** if someone request changes for your contributions
 10. Your contribution gets accepted. 🎉🎉🎉
@@ -51,7 +56,7 @@ Do not comment on open issues unless you can provide more information to resolve
 it. Use the subscribe function to keep up-to-date with the issue or the voting
 system to support it.
 
-## Bug reports
+### Bug reports
 
 When you can't find a previous bug, open an issue keeping in mind the following
 considerations:
@@ -60,7 +65,7 @@ considerations:
 - Copy and paste the full error message, including the `backtrace`
 - Be as detailed as possible and include any additional information
 
-## Feature requests
+### Feature requests
 
 If you want to request or implement a new feature please submit an issue
 describing the details and possible use cases.
