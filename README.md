@@ -52,7 +52,7 @@ You may find the documentation for [each command](docs/random.md) inside the
 
 ### As a library
 
-```sh
+```go
 package main
 
 import (
@@ -62,7 +62,14 @@ import (
 )
 
 func main() {
-    fmt.Println(random.Digit())
+	// Generate 16 characters password.
+	fmt.Println(random.Password(16))
+
+	// Generate 2 paragraphs dummy text.
+	fmt.Println(random.LoremParagraph(3))
+
+	// Generate Turkish Citizen number.
+	fmt.Println(random.TC())
 }
 ```
 
