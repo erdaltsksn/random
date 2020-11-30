@@ -13,6 +13,10 @@ Faker.
 - Cross-Platform
 - Automatically copied into system clipboard
 
+## Requirements
+
+- [Go](https://golang.org) (for library)
+
 ## Getting Started
 
 ### 1. Install the application.
