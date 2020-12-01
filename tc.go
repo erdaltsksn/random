@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
-	"time"
 )
 
 // TC generates a random Turkish Citizen number.
 func TC() string {
+	randSeed()
+
 	var (
 		d1, d2, d3, d4, d5, d6, d7, d8, d9, c1, c2 int
 	)
 
-	rand.Seed(time.Now().UnixNano())
 	// The first number cannot be 0
 	d1 = rand.Intn(9) + 1
 	d2 = rand.Intn(10)

@@ -3,7 +3,6 @@ package random
 import (
 	"fmt"
 	"math/rand"
-	"time"
 )
 
 // Person is a struct hold data.
@@ -15,6 +14,8 @@ type Person struct {
 
 // Firstname generates a random first name according specified gender and country.
 func Firstname(gender, country string) string {
+	randSeed()
+
 	var dataWithGender []Person
 	var data []Person
 
@@ -42,13 +43,13 @@ func Firstname(gender, country string) string {
 		data = FirstNameList
 	}
 
-	rand.Seed(time.Now().Unix())
-
 	return data[rand.Intn(len(data))].Name
 }
 
 // Lastname generates a random last name according specified gender and country.
 func Lastname(country string) string {
+	randSeed()
+
 	var data []Person
 
 	if country != "" {
@@ -62,8 +63,6 @@ func Lastname(country string) string {
 	if len(data) == 0 {
 		data = LastNameList
 	}
-
-	rand.Seed(time.Now().Unix())
 
 	return data[rand.Intn(len(data))].Name
 }

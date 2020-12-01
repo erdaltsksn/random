@@ -2,7 +2,6 @@ package random
 
 import (
 	"math/rand"
-	"time"
 )
 
 // UserAgentList holds the data for user-agent command.
@@ -52,7 +51,7 @@ var UserAgentList = []string{
 
 // UserAgent generate a random user-agent name.
 func UserAgent() string {
-	rand.Seed(time.Now().UnixNano())
+	randSeed()
 
 	return UserAgentList[rand.Intn(len(UserAgentList))]
 }

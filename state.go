@@ -2,7 +2,6 @@ package random
 
 import (
 	"math/rand"
-	"time"
 )
 
 // StateList hold the data for state command.
@@ -61,7 +60,7 @@ var StateList = []string{
 
 // State generate a random state name.
 func State() string {
-	rand.Seed(time.Now().UnixNano())
+	randSeed()
 
 	return StateList[rand.Intn(len(StateList))]
 }

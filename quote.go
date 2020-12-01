@@ -2,7 +2,6 @@ package random
 
 import (
 	"math/rand"
-	"time"
 )
 
 // QuoteStr is a struct hold data.
@@ -13,6 +12,8 @@ type QuoteStr struct {
 
 // Quote generates a random quote. You can limit it by specifying an author.
 func Quote(author string) QuoteStr {
+	randSeed()
+
 	var data []QuoteStr
 
 	if author != "" {
@@ -26,8 +27,6 @@ func Quote(author string) QuoteStr {
 	if len(data) == 0 {
 		data = QuoteList
 	}
-
-	rand.Seed(time.Now().Unix())
 
 	quote := data[rand.Intn(len(data))]
 

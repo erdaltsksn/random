@@ -2,7 +2,6 @@ package random
 
 import (
 	"math/rand"
-	"time"
 )
 
 // CountryList holds the data for country command.
@@ -254,7 +253,7 @@ var CountryList = []string{
 
 // Country generate a random country name.
 func Country() string {
-	rand.Seed(time.Now().UnixNano())
+	randSeed()
 
 	return CountryList[rand.Intn(len(CountryList))]
 }
