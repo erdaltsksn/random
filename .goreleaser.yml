@@ -5,7 +5,7 @@ before:
 builds:
 -
   # Path to main.go file or main package. Default is `.`.
-  main: ./cmd/main.go
+  main: ./cmd/random/main.go
   env:
   - CGO_ENABLED=0
     # GOOS list to build for. Defaults are darwin and linux.

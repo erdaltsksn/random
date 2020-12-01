@@ -17,5 +17,5 @@ var stateCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(stateCmd)
+	RootCmd.AddCommand(stateCmd)
 }

@@ -22,7 +22,7 @@ var quoteCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(quoteCmd)
+	RootCmd.AddCommand(quoteCmd)
 
 	// Here you will define your flags and configuration settings.
 	quoteCmd.Flags().StringVarP(&author, "author", "a", "",

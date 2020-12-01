@@ -19,7 +19,7 @@ var cardCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(cardCmd)
+	RootCmd.AddCommand(cardCmd)
 
 	// Here you will define your flags and configuration settings.
 	cardCmd.Flags().StringVarP(&cardType, "type", "t", "",

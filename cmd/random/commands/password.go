@@ -18,7 +18,7 @@ var passwordCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(passwordCmd)
+	RootCmd.AddCommand(passwordCmd)
 
 	// Here you will define your flags and configuration settings.
 	passwordCmd.Flags().IntVarP(&length, "length", "l", 32,

@@ -20,7 +20,7 @@ publishing industries for previewing layouts and visual mockups.`,
 }
 
 func init() {
-	rootCmd.AddCommand(loremCmd)
+	RootCmd.AddCommand(loremCmd)
 
 	// Here you will define your flags and configuration settings.
 	loremCmd.PersistentFlags().IntVarP(&count, "count", "c", 1,

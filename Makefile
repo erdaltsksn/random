@@ -18,7 +18,7 @@ fmt: ## Run all formatings
 
 .PHONY: test
 test: ## Run all test
-	go test -v ./...
+	go test ./...
 
 .PHONY: coverage
 coverage: ## Show test coverage
@@ -27,5 +27,5 @@ coverage: ## Show test coverage
 	@rm coverage.out
 
 .PHONY: docs
-docs: ## Generate documentation
-	go run docs/gen.go
+docs: ## Generate the documentation
+	go run ./scripts/gen-docs/main.go

@@ -19,5 +19,5 @@ var userAgentCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(userAgentCmd)
+	RootCmd.AddCommand(userAgentCmd)
 }

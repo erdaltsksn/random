@@ -17,5 +17,5 @@ var letterCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(letterCmd)
+	RootCmd.AddCommand(letterCmd)
 }

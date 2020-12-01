@@ -31,7 +31,7 @@ var authorCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(authorCmd)
+	RootCmd.AddCommand(authorCmd)
 
 	// Here you will define your flags and configuration settings.
 	authorCmd.Flags().BoolVar(&listAuthors, "all", false,

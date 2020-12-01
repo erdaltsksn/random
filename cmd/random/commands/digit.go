@@ -18,5 +18,5 @@ from 0 to 9.`,
 }
 
 func init() {
-	rootCmd.AddCommand(digitCmd)
+	RootCmd.AddCommand(digitCmd)
 }

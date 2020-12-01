@@ -22,7 +22,7 @@ var nameCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(nameCmd)
+	RootCmd.AddCommand(nameCmd)
 
 	// Here you will define your flags and configuration settings.
 	nameCmd.PersistentFlags().StringVarP(&gender, "gender", "g", "",

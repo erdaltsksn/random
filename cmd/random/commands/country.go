@@ -17,5 +17,5 @@ var countryCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(countryCmd)
+	RootCmd.AddCommand(countryCmd)
 }
