@@ -16,6 +16,12 @@ random letter lower [flags]
   -h, --help   help for lower
 ```
 
+### Options inherited from parent commands
+
+```
+      --unattended   Do not copy the value to the clipboard
+```
+
 ### SEE ALSO
 
 * [random letter](random_letter.md)	 - Generate a random letter

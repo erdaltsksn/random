@@ -13,11 +13,13 @@ func printOutput(o interface{}) {
 	output := fmt.Sprint(o)
 	fmt.Println(output)
 
-	if err := toClipboard(output); err != nil {
-		cui.Error("Error while copying value to system clipboard", err)
-	}
+	if !unattended {
+		if err := toClipboard(output); err != nil {
+			cui.Error("Error while copying value to system clipboard", err)
+		}
 
-	cui.Success("Copied")
+		cui.Success("Copied")
+	}
 }
 
 func toClipboard(output string) error {

@@ -19,8 +19,9 @@ random lorem sentence [flags]
 ### Options inherited from parent commands
 
 ```
-  -c, --count int   How many items (paragraphs, sentences or characters) in lorem should be
-                    generated. (default 1)
+  -c, --count int    How many items (paragraphs, sentences or characters) in lorem should be
+                     generated. (default 1)
+      --unattended   Do not copy the value to the clipboard
 ```
 
 ### SEE ALSO

@@ -10,7 +10,8 @@ address, hex color etc.
 ### Options
 
 ```
-  -h, --help   help for random
+  -h, --help         help for random
+      --unattended   Do not copy the value to the clipboard
 ```
 
 ### SEE ALSO

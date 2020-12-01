@@ -28,6 +28,7 @@ random name first [flags]
   -g, --gender string    Which gender should be used. Available genders:
                          - Male
                          - Female
+      --unattended       Do not copy the value to the clipboard
 ```
 
 ### SEE ALSO
