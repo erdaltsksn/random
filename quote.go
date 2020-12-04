@@ -1,9 +1,5 @@
 package random
 
-import (
-	"math/rand"
-)
-
 // QuoteStr is a struct hold data.
 type QuoteStr struct {
 	Text   string
@@ -28,7 +24,7 @@ func Quote(author string) QuoteStr {
 		data = QuoteList
 	}
 
-	quote := data[rand.Intn(len(data))]
+	quote := data[randInt(data)]
 
 	return quote
 }

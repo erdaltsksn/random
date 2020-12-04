@@ -1,9 +1,5 @@
 package random
 
-import (
-	"math/rand"
-)
-
 // UserAgentList holds the data for user-agent command.
 var UserAgentList = []string{
 	"Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch)",
@@ -53,5 +49,5 @@ var UserAgentList = []string{
 func UserAgent() string {
 	randSeed()
 
-	return UserAgentList[rand.Intn(len(UserAgentList))]
+	return UserAgentList[randInt(UserAgentList)]
 }

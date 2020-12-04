@@ -119,7 +119,7 @@ var SupportedCards = []CardType{
 // GetRandomCardType return a random card type.
 func GetRandomCardType() CardType {
 	randSeed()
-	randType := rand.Intn(len(SupportedCards))
+	randType := randInt(SupportedCards)
 
 	return SupportedCards[randType]
 }
@@ -139,8 +139,8 @@ func GetCardType(name string) CardType {
 func (c CardType) Generate() string {
 	randSeed()
 
-	length := c.Length[rand.Intn(len(c.Length))]
-	prefix := c.Prefix[rand.Intn(len(c.Prefix))]
+	length := c.Length[randInt(c.Length)]
+	prefix := c.Prefix[randInt(c.Prefix)]
 
 	card := prefix
 	randomNumberLength := length - (len(prefix) + 1)

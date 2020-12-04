@@ -1,9 +1,5 @@
 package random
 
-import (
-	"math/rand"
-)
-
 // CountryList holds the data for country command.
 var CountryList = []string{
 	"Afghanistan",
@@ -255,5 +251,5 @@ var CountryList = []string{
 func Country() string {
 	randSeed()
 
-	return CountryList[rand.Intn(len(CountryList))]
+	return CountryList[randInt(CountryList)]
 }

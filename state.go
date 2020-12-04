@@ -1,9 +1,5 @@
 package random
 
-import (
-	"math/rand"
-)
-
 // StateList hold the data for state command.
 var StateList = []string{
 	"Alabama",
@@ -62,5 +58,5 @@ var StateList = []string{
 func State() string {
 	randSeed()
 
-	return StateList[rand.Intn(len(StateList))]
+	return StateList[randInt(StateList)]
 }

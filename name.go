@@ -2,7 +2,6 @@ package random
 
 import (
 	"fmt"
-	"math/rand"
 )
 
 // Person is a struct hold data.
@@ -43,7 +42,7 @@ func Firstname(gender, country string) string {
 		data = FirstNameList
 	}
 
-	return data[rand.Intn(len(data))].Name
+	return data[randInt(data)].Name
 }
 
 // Lastname generates a random last name according specified gender and country.
@@ -64,7 +63,7 @@ func Lastname(country string) string {
 		data = LastNameList
 	}
 
-	return data[rand.Intn(len(data))].Name
+	return data[randInt(data)].Name
 }
 
 // Fullname generates a random full name according specified gender and country.
